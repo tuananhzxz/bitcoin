@@ -4,6 +4,10 @@ on:
   push:
     branches: ["main"]
 
+permissions:
+  id-token: write
+  contents: write  # This allows pushing to the repository
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,7 +27,7 @@ jobs:
       - name: Build with Next.js
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: "/bitcoin" # Điều chỉnh basePath nếu cần
+          NEXT_PUBLIC_BASE_PATH: "/bitcoin" # Adjust basePath if needed
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
