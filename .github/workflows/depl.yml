@@ -36,4 +36,4 @@ jobs:
         with:
           folder: out # Thư mục sau khi build
           branch: gh-pages
-          token: ${{ secrets.ACCESS_TOKEN }} # Sử dụng token đã tạo
+          token: ${{ secrets.deployee }}
