@@ -24,11 +24,9 @@ jobs:
         run: npm ci
         
       - name: Build application
-        run: npm run build
-        
-      # Bỏ qua bước test vì không có script test
-      # - name: Run tests
-      #   run: npm test
+        run: |
+          npm run build
+          npm run export
         
       - name: Deploy to GitHub Pages
         if: success() && github.ref == 'refs/heads/main'
