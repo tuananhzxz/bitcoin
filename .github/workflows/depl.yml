@@ -34,6 +34,6 @@ jobs:
         if: success() && github.ref == 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: out # Thư mục sau khi build
+          folder: out
           branch: gh-pages
-          token: ${{ secrets.deployee }}
+          token: ${{ secrets.GITHUB_TOKEN }}
