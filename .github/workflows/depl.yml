@@ -6,7 +6,8 @@ on:
 
 permissions:
   id-token: write
-  contents: write  # This allows pushing to the repository
+  contents: write  # Allows pushing to the repository
+  pages: write     # Required for deploying to GitHub Pages
 
 jobs:
   build:
